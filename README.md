@@ -4,11 +4,11 @@ A zero-build progressive web application for individual Murph training and demo 
 
 ## GitHub Pages deployment
 
-1. Create a public GitHub repository (for example `merph-tracker`).
+1. This project is in the public repository [`Ruffmantom/MURPH-challenge-v1`](https://github.com/Ruffmantom/MURPH-challenge-v1).
 2. Upload **the contents of this folder** to the repository root. Keep `index.html`, `app.js`, `styles.css`, `sw.js`, and `manifest.webmanifest` at the root, and keep the `icons` folder.
 3. Go to repository **Settings → Pages → Build and deployment**.
-4. Choose **Deploy from a branch**, then select `main` and `/ (root)` and save.
-5. Open `https://YOUR-USERNAME.github.io/merph-tracker/` once Pages has deployed. GitHub Pages serves over HTTPS, which is required for installable PWAs.
+4. Choose **Deploy from a branch**, then select `master` and `/ (root)` and save.
+5. Open `https://ruffmantom.github.io/MURPH-challenge-v1/` once Pages has deployed. GitHub Pages serves over HTTPS, which is required for installable PWAs.
 
 The manifest and service worker deliberately use **relative paths**, so the PWA works under a GitHub Pages repository subdirectory. You do **not** need to edit any paths to match your repository name.
 
