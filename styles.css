@@ -7,3 +7,36 @@
 @media(max-width:650px){.main-area{padding:14px 13px 115px}.page-heading{margin-bottom:17px}.page-heading h1{font-size:29px}.page-heading p{font-size:12px}.grid{gap:11px}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3>.stat-card:last-child{grid-column:1/-1}.dashboard-grid,.workout-grid{grid-template-columns:1fr}.card{padding:16px}.hero{padding:21px 18px}.hero h1{font-size:30px}.hero p{font-size:12px}.hero-actions .btn{flex:1}.stat-card{padding:13px}.stat-top{margin-bottom:12px}.stat-num{font-size:27px}.ring-wrap svg{max-width:166px}.workout-sticky{position:static}.rounds{grid-template-columns:repeat(5,minmax(0,1fr))}.round-btn{min-height:50px}.form-grid{grid-template-columns:1fr}.form-grid .field-wide{grid-column:auto}.reward-card .reward-icon{width:46px;height:46px}.top-pill{padding:7px 9px}.challenge-steps{gap:4px}.step{padding:10px 0}.step .step-sub{font-size:8px}.timer-time{font-size:46px}.mini-stepper button{padding:7px 8px}.rep-control{flex-wrap:wrap}.rep-name{flex:1}.rep-number{min-width:auto}.mini-stepper{width:100%;justify-content:flex-end}.modal-backdrop{align-items:flex-end;padding:0}.modal{max-height:92dvh;max-width:none;border-radius:20px 20px 0 0;padding:20px 18px calc(22px + env(safe-area-inset-bottom))}.toast-layer{bottom:calc(92px + env(safe-area-inset-bottom));right:12px;left:12px;max-width:none}.mobile-head .brand-mark{width:34px;height:34px;font-size:20px}.mobile-head .brand-name{font-size:18px}.mobile-head .brand-subtitle{font-size:8px}}
 @media(max-width:380px){.grid-3 .stat-card:last-child{grid-column:1/-1}.level-choice{padding:10px 7px}.level-choice strong{font-size:11px}.segment button{padding:7px 6px}.mini-stepper button{min-width:30px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Workout timer stays visible once its full-size version scrolls away. */
+.workout-main-timer{margin-bottom:2px}
+.workout-sticky-timer{position:fixed;z-index:40;top:0;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:15px;padding:calc(9px + env(safe-area-inset-top)) 16px 9px;background:rgba(16,27,34,.97);border-bottom:1px solid #3d5b4b;box-shadow:0 8px 24px #0007;backdrop-filter:blur(12px)}
+.workout-sticky-timer[hidden]{display:none}
+.sticky-timer-label{font-size:10px;letter-spacing:1px;color:#9aafba;font-weight:800}
+.sticky-timer-time{font-size:21px;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.workout-sticky-timer .timer-buttons{gap:6px}
+.compete-screen .leader-row{min-width:0}
+.compete-screen .leader-main{overflow:hidden}
+.compete-screen .leader-main>.row{min-width:0;flex-wrap:wrap;gap:5px}
+.compete-screen .leader-main>.row strong{min-width:0;overflow-wrap:anywhere}
+.compete-screen .leader-score{flex:0 0 auto;margin-left:auto}
+.compete-screen .card{min-width:0}
+@media(max-width:650px){
+  .workout-sticky-timer{justify-content:space-between;gap:8px;padding:calc(8px + env(safe-area-inset-top)) 12px 8px}
+  .sticky-timer-label{font-size:9px;letter-spacing:.6px}
+  .sticky-timer-time{font-size:19px;margin-right:auto}
+  .workout-sticky-timer .btn{min-height:34px;padding:6px 9px}
+  .compete-screen>.grid.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .compete-screen>.grid.grid-3>.stat-card:last-child{grid-column:1/-1}
+  .compete-screen>.grid.grid-2{grid-template-columns:minmax(0,1fr);gap:11px}
+  .compete-screen>.grid.grid-2>.card{padding:14px}
+  .compete-screen .card-head{gap:8px;margin-bottom:13px}
+  .compete-screen .card-head h2{font-size:16px}
+  .compete-screen .leader-row{gap:8px;padding:11px 0}
+  .compete-screen .rank{width:29px;height:29px}
+  .compete-screen .leader-score{font-size:11px}
+  .compete-screen .leader-main>.row{gap:4px}
+  .compete-screen .leader-main>.row .badge{font-size:9px;padding:4px 6px}
+  .compete-screen .grid.grid-2[style*="align-items:center"]{grid-template-columns:minmax(0,1fr)}
+  .compete-screen .grid.grid-2[style*="align-items:center"]>div:last-child{padding:12px!important}
+}
